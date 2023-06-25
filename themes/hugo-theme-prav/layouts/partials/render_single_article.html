@@ -1,22 +1,19 @@
 {{ if or (.Date) (ne .Params.Kind "page") }}
-
+<div class="date">
+    <time pubdate="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+</div>
 {{ end }}
 <article>
     {{ if eq (.Scratch.Get "isMainPage") "true"  -}}
-    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     {{ else -}}
-    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+    <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
     {{- end -}}
-    
     <div class="tags">
         {{ range .Params.tags }}
         {{ $name := . }}
         <a href="/tags/{{ $name | urlize }}" class="pure-button">{{ $name }}</a>
         {{ end }}
-        <div class="date">
-            <time pubdate="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-        </div>
     </div>
-    
-    <!--{{ replace .Content "<table>" "<table class='pure-table pure-table-striped'>" | safeHTML }}-->
+    {{ replace .Content "<table>" "<table class='pure-table pure-table-striped'>" | safeHTML }}
 </article>
