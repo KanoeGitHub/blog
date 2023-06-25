@@ -1,0 +1,45 @@
+baseURL = "/"
+languageCode = "jp"
+title = "Kanoe Studio"
+theme = "hugo-theme-prav"
+relativeurls = true
+
+pygmentsCodeFences = "true"
+pygmentsStyle = "perldoc"
+
+# If you want to track using GA or use disqus for comments, uncomment the 
+# following and add the correct values
+#googleanalytics = ""
+#disqusShortname = ""
+
+# The settings below are used throughout the theme.
+# Please update!
+[params]
+    title = "Kanoe Studio"
+    tagline = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    author = "Kanoe"
+    authorImgPath = "/img/avater.jpg"
+    authorBlurb = "音楽制作やプログラミング、MacOS製品関連を中心に雑記などいろいろ書きます。"
+    
+# If you do not want a social icon, just comment it out
+# Please update the example values!
+[social]
+    email = ""
+    facebook = ""
+    twitter = "http://twitter.com/KanoeTweet"
+    medium = ""
+    github = "https://github.com/KanoeGitHub"
+    linkedin = ""
+    mastodon = ""
+    
+
+# Set unsafe mode to allow markdownify to work with goldmark
+# This is important. Please do not delete. It is used to re-render markdown
+#[markup]
+#    [markup.goldmark]
+#        [markup.goldmark.renderer]
+#            unsafe = true
+#    linkedin = "http://uk.linkedin.com/in/example"
+
+[permalinks]
+    posts = "archives/:slug"
