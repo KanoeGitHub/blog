@@ -53,6 +53,14 @@ table, img {
     padding: 1em;
 }
 
+.pad-0.5 {
+    padding: 0.5em;
+}
+
+.pad-0.1 {
+    padding: 0.1em;
+}
+
 .hide {
     display: none;
 }
@@ -171,7 +179,7 @@ span.author {
 
 h1, h2, h3 {
     font-weight: normal;
-    margin: 1.5em 0 0.5em 0;
+    margin: 0.5em 0 0.2em 0;
     line-height: 1.4em;
 }
 
