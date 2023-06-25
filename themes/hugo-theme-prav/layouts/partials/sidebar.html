@@ -12,9 +12,8 @@
         <div class="pure-menu pure-menu-open">
             <ul class="pure-menu-list">
                 {{ range first 10 (where .Site.RegularPages "Type" "in" site.Params.mainSections) }}
-                <li class="pure-menu-item">
+                <li class="pure-menu-item" style="border-bottom: 2px dashed #c8c8c8;">
                     <a href="{{ .Permalink }}" class="pure-menu-link">{{ .Title }}<br>
-                        <small>{{ .Description }}</small>
                     </a>
                 </li>
                 {{ end }}
