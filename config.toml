@@ -31,15 +31,12 @@ pygmentsStyle = "perldoc"
     github = "https://github.com/KanoeGitHub"
     linkedin = ""
     mastodon = ""
-    
-
-# Set unsafe mode to allow markdownify to work with goldmark
-# This is important. Please do not delete. It is used to re-render markdown
-#[markup]
-#    [markup.goldmark]
-#        [markup.goldmark.renderer]
-#            unsafe = true
-#    linkedin = "http://uk.linkedin.com/in/example"
 
 [permalinks]
     posts = "archives/:slug"
+    
+    
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
