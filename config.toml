@@ -9,7 +9,7 @@ pygmentsStyle = "perldoc"
 
 # If you want to track using GA or use disqus for comments, uncomment the 
 # following and add the correct values
-#googleanalytics = ""
+googleanalytics = "G-NJQNHG9JTZ"
 #disqusShortname = ""
 
 # The settings below are used throughout the theme.
