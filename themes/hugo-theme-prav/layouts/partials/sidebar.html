@@ -28,17 +28,7 @@
                 <small>({{ .Count }})</small></a>
             {{ end }}
             {{end}}
-        </div>
-        <h3>Tags</h3>
-        <div style="text-align:center" class="tags">
-            {{ range $.Site.Taxonomies.tags.ByCount }}
-            {{ if gt .Count 0 }}
-            <a href="/tags/{{ .Name }}" class="pure-button"> {{ .Name }}
-                <small>({{ .Count }})</small></a>
-            {{ end }}
-            {{end}}
-        </div>
-        
+        </div>       
     
         
     </div> <!-- pad -->
