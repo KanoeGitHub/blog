@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://kanoe.studio/"
 languageCode = "jp"
 title = "Kanoe Studio"
 theme = "hugo-theme-prav"
