@@ -8,7 +8,7 @@
     <h4> 
         {{ range .Params.categories }}
         {{ $name := . }}
-        <a href="/tags/{{ $name | urlize }}" >【{{ $name }}】 &nbsp; - &nbsp;</a>
+        <a href="/tags/{{ $name | urlize }}" style="color:#44617b">【{{ $name }}】 &nbsp; - &nbsp;</a>
         {{ end }}
         <a href="{{ .Permalink }}">{{ .Title }}</a>
     </h4>
