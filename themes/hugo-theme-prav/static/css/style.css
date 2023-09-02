@@ -104,7 +104,7 @@ article, div.list {
 }
 
 div.list {
-    margin: 0.1divem;
+    margin: 0.1em;
     flex: 1;
     padding: 0;
 }
