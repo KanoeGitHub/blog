@@ -5,14 +5,15 @@
     <h1 style="text-align: center; margin: 0; font-size: x-large;">
         記事一覧 (page {{ $paginator.PageNumber }} / {{ $paginator.TotalPages }})
     </h1>
-
+    
     {{ range .Paginator.Pages }}
-
+    
     {{ .Scratch.Set "isMainPage" "true" }}
-    <div class="pad">
-        {{- partial "render_article_list.html" . -}}
-    </div>
-    <div class="pad"></div>
+    <table>
+        <tbody>
+                {{- partial "render_article_list.html" . -}}
+        </tbody>
+    </table>
     
     {{ end }}
 

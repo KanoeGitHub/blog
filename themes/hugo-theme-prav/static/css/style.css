@@ -73,7 +73,7 @@ table, img {
 
 #content {
     margin: 0 auto;
-    line-height: 1.8em;
+    line-height: 1.2em;
 }
 
 #content li {
@@ -104,7 +104,7 @@ article, div.list {
 }
 
 div.list {
-    margin: 0.4em;
+    margin: 0.1divem;
     flex: 1;
     padding: 0;
 }
@@ -303,3 +303,24 @@ blockquote {
 .pagination-item {
     margin: 0 2em;
 }
+
+table {
+    width: 100%;
+    color: #555;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.article td {
+        text-align: left; 
+    }
+
+td.td-date {
+    padding: 0 5px 0 10px;    
+    width: 50px;    
+}
+

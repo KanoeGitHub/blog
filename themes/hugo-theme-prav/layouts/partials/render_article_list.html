@@ -1,19 +1,23 @@
-{{ if or (.Date) (ne .Params.Kind "page") }}
-<div class="date">
-    <time pubdate="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-</div>
-{{ end }}
-<article>
-    {{ if eq (.Scratch.Get "isMainPage") "true"  -}}
-    <h4> 
-        {{ range .Params.categories }}
-        {{ $name := . }}
-        <a href="/tags/{{ $name | urlize }}" style="color:#44617b">【{{ $name }}】 &nbsp; - &nbsp;</a>
+<tr class="article">
+    <td class="td-date">
+        {{ if or (.Date) (ne .Params.Kind "page") }}
+        <div class="date">
+            <time pubdate="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006/01/02" }}</time>
+        </div>
         {{ end }}
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-    </h4>
-    {{ else -}}
-    <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
-    {{- end -}}
-    
-</article>
+    </td>
+    <td>
+        {{ if eq (.Scratch.Get "isMainPage") "true"  -}}
+        <h4> 
+            {{ range .Params.categories }}
+            {{ $name := . }}
+            <a href="/tags/{{ $name | urlize }}" style="color:#44617b">【{{ $name }}】 &nbsp; - &nbsp;</a>
+            {{ end }}
+            <a href="{{ .Permalink }}">{{ .Title | truncate 40}}</a>
+        </h4>
+        {{ else -}}
+        <h4><a href="{{ .Permalink }}">{{ .Title | truncate 40 }}</a></h4>
+        {{- end -}}
+    </td>    
+</tr>
+ 
