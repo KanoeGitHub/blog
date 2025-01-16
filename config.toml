@@ -19,7 +19,7 @@ googleanalytics = "G-NJQNHG9JTZ"
     tagline = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     author = "Kanoe"
     authorImgPath = "/img/avater.jpg"
-    authorBlurb = "音楽制作やプログラミング、MacOS製品関連を中心に雑記などいろいろ書きます。"    
+    authorBlurb = "音楽制作やプログラミング、その他諸々雑多に書きます。Amazonアソシエイトを始め、複数のアフィリエイトプログラムに参加していますので、記事内のリンクにはアフィリエイトリンクが含まれている場合があります。"    
     
 # If you do not want a social icon, just comment it out
 # Please update the example values!
