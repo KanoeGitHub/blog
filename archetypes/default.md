@@ -17,6 +17,5 @@ menu:
 	weight: 4
 slug: 
 draft: true
+slug: 2025xxxxx
 ---
-
-
