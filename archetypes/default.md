@@ -2,9 +2,14 @@
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 categories:
-- ""
+- "programming"
+- "dtm"
+- "apple"
+- "その他"
 tags: [
 "LogicProX",
+"雑談", 
+"機材",
 ]
 menu:
   main:
