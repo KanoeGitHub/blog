@@ -72,8 +72,8 @@
     <meta property="og:title" content="{{ .Title }}">
     {{ end -}}
 
-    {{- if .Site.Social.twitteruser -}}
-    <meta name="twitter:creator" content="{{ .Site.Social.twitteruser }}">
+    {{- if .Site.Params.Social.twitteruser -}}
+    <meta name="twitter:creator" content="{{ .Site.Params.Social.twitteruser }}">
     {{ end }}
 
     {{ "<!-- Any custom header goes here-->" | safeHTML }}
