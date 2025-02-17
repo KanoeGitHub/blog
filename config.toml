@@ -23,7 +23,7 @@ googleanalytics = "G-NJQNHG9JTZ"
     
 # If you do not want a social icon, just comment it out
 # Please update the example values!
-[social]
+[params.social]
     email = ""
     facebook = ""
     twitter = "http://twitter.com/KanoeTweet"
