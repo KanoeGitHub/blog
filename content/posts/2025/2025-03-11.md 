@@ -1,0 +1,111 @@
+---
+title: M4 Mac mini で HHKB Lite2 for Mac を使用する
+date: 2025-03-11
+categories:
+- "その他"
+tags: [
+ "機材"
+ ]
+menu:
+  main:
+    name: Basic Elements
+    weight: 4
+slug: 20250311
+---
+
+[HHKB Lite2 for Mac](https://happyhackingkb.com/jp/products/discontinued/hhkb_lite2mac/) はすでにサポートが切れており、最新のOSには対応していません。
+
+そのため、一部のキーが想定外の動作を起こしていました。
+
+- 左⌘ : なぜか ` や ~ が出る
+- 英数 : 反応なし
+- かな : 反応なし
+- 右⌘ : 反応なし
+
+しかし、個人的にはこの打鍵感やサイズ感が好きなので、なんとかして使用したいと思いました。
+
+調べると、[**Karabiner**](https://happyhackingkb.com/jp/products/discontinued/hhkb_lite2mac/)というアプリが使えそうでした。
+
+[**Karabiner**](https://happyhackingkb.com/jp/products/discontinued/hhkb_lite2mac/)を使用すると、現在キーに割り当てられているコードが分かります。  
+また、そこで判明したコードをもとに、別のキーへの再割り当てを行うことが可能です。
+
+インストールや、導入方法は割愛します。  
+
+設定には、`Complex Modifications`を使用します。  
+
+`Add own rule`を使用して、以下の四つの設定を加えました。
+
+1. 左⌘  
+  ``` 
+  {
+    "description": "grave_accent_and_tilde をコマンドキーとして使用 (シフト併用含む)",
+    "manipulators": 
+    [
+      {
+        "from": {
+          "key_code": "grave_accent_and_tilde",
+          "modifiers": { "optional": ["any"] }
+        },
+        "to": [{ "key_code": "left_command" }],
+        "type": "basic"
+      }
+    ]
+  }
+  ```
+2. 英数 
+  ``` 
+  {
+    "description": "japanese_pc_nfer　を英数キーとして使用 (シフト併用含む)",
+    "manipulators": 
+    [
+      {
+        "from": {
+          "key_code": "japanese_pc_nfer",
+          "modifiers": { "optional": ["any"] }
+        },
+        "to": [{ "key_code": "japanese_eisuu" }],
+        "type": "basic"
+      }
+    ]
+  }
+  ```
+3. かな
+  ```
+  {
+    "description": "japanese_pc_xfer をかなキーとして使用 (シフト併用含む)",
+    "manipulators": 
+    [
+      {
+        "from": {
+          "key_code": "japanese_pc_xfer",
+          "modifiers": { "optional": ["any"] }
+        },
+        "to": [{ "key_code": "japanese_kana" }],
+        "type": "basic"
+      }
+    ]
+  }
+  ```
+4. かな
+  ```
+  {
+    "description": "japanese_pc_katakana を右コマンドキーとして使用 (シフト併用含む)",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "japanese_pc_katakana",
+          "modifiers": { "optional": ["any"] }
+        },
+        "to": [{ "key_code": "right_command" }],
+        "type": "basic"
+      }
+    ]
+  }
+  ```
+
+`"modifiers": { "optional": ["any"] }`を追加することで、SHIFTを押しながらの場合でも、同様に変更が適用されます。
+
+これでまたしばらくは[HHKB Lite2 for Mac](https://happyhackingkb.com/jp/products/discontinued/hhkb_lite2mac/) が使用できます。
+
+助かりました。
+
