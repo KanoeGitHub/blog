@@ -1,14 +1,10 @@
 ---
 title: "Develop"
 date: 2025-10-28
-menu: "main"
 description: "個人開発したものをまとめたポートフォリオページ"
 ---
 
-# 個人開発一覧
+| リリース日 | 製作物 | 形式 | 最終更新 |
+| --- | --- | --- | --- | 
+| 2025/5/11 | [Chrome Web Store](https://chromewebstore.google.com/detail/scroll-element-capture/gihcgmefokbbpmchkeihmccccjmcfcmo?hl=ja&authuser=0) | Chrome拡張機能 | 2025/8/5 
 
-- サービスA（概要・リンクなど）
-- ツールB（概要・リンクなど）
-- アプリC（概要・リンクなど）
-
-（ここに開発物をMarkdownで追加してください）

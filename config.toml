@@ -33,12 +33,6 @@ googleanalytics = "G-NJQNHG9JTZ"
     linkedin = ""
     mastodon = ""
 
-[menu]
-  [[menu.main]]
-    name = "Develop"
-    url = "/develop/"
-    weight = 50
-
 [permalinks]
     posts = "archives/:slug"
     
