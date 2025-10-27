@@ -1,3 +1,4 @@
+
 baseURL = "https://kanoe.studio/"
 languageCode = "jp"
 title = "Kanoe Studio"
@@ -31,6 +32,12 @@ googleanalytics = "G-NJQNHG9JTZ"
     github = "https://github.com/KanoeGitHub"
     linkedin = ""
     mastodon = ""
+
+[menu]
+  [[menu.main]]
+    name = "Develop"
+    url = "/develop/"
+    weight = 50
 
 [permalinks]
     posts = "archives/:slug"
