@@ -4,6 +4,7 @@
 </div>
 {{ end }}
 <article>
+    {{ if or (not .Params.ads) (eq .Params.ads true) }}
     <div class="GoogleAd_wide">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1903888574571147"
             crossorigin="anonymous"></script>
@@ -18,6 +19,7 @@
             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
     </div>
+    {{ end }}
     {{ if eq (.Scratch.Get "isMainPage") "true"  -}}
     <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     {{ else -}}
@@ -31,6 +33,7 @@
     </div>
     {{ replace .Content "<table>" "<table class='pure-table pure-table-striped'>" | safeHTML }}
     
+        {{ if or (not .Params.ads) (eq .Params.ads true) }}
         <div class ="GoogleAd_square">
             <!-- Google AdSense-->
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1903888574571147"
@@ -47,4 +50,5 @@
             </script>
             <!-- Google AdSense-->
         </div>
+        {{ end }}
 </article>

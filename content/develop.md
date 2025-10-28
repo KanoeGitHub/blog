@@ -1,6 +1,7 @@
 ---
 title: "Develop"
 description: "個人開発したものをまとめたページ"
+ads: false
 ---
 
 | リリース日 | 製作物 | 形式 | 最終更新 |
