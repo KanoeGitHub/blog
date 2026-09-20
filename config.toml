@@ -1,0 +1,46 @@
+
+baseURL = "https://kanoe.studio/"
+languageCode = "ja"
+title = "Kanoe Studio"
+theme = "hugo-theme-prav"
+relativeurls = false
+enableRobotsTXT = true
+enableGitInfo = true
+
+pygmentsCodeFences = "true"
+pygmentsStyle = "perldoc"
+
+# If you want to track using GA or use disqus for comments, uncomment the 
+# following and add the correct values
+googleanalytics = "G-NJQNHG9JTZ"
+#disqusShortname = ""
+
+# The settings below are used throughout the theme.
+# Please update!
+[params]
+    title = "Kanoe Studio"
+    tagline = "音楽制作やプログラミング、アフィリエイトに関する技術ブログ"
+    author = "Kanoe"
+    authorImgPath = "/img/avater.jpg"
+    authorBlurb = "音楽制作やプログラミング、その他諸々雑多に書きます。Amazonアソシエイトを始め、複数のアフィリエイトプログラムに参加していますので、記事内のリンクにはアフィリエイトリンクが含まれている場合があります。"    
+    images = ["/img/avater.jpg"] # OGPのデフォルト画像（記事固有の画像がない場合に使用されます）
+    
+# If you do not want a social icon, just comment it out
+# Please update the example values!
+[params.social]
+    email = ""
+    facebook = ""
+    twitter = "http://twitter.com/KanoeTweet"
+    medium = ""
+    github = "https://github.com/KanoeGitHub"
+    linkedin = ""
+    mastodon = ""
+
+[permalinks]
+    posts = "archives/:slug"
+    
+    
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true

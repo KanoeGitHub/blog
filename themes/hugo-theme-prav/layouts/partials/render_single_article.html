@@ -1,0 +1,54 @@
+{{ if or (.Date) (ne .Params.Kind "page") }}
+<div class="date">
+    <time pubdate="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+</div>
+{{ end }}
+<article>
+    {{ if or (not .Params.ads) (eq .Params.ads true) }}
+    <div class="GoogleAd_wide">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1903888574571147"
+            crossorigin="anonymous"></script>
+        <!-- Kad02 -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-1903888574571147"
+            data-ad-slot="1620150220"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    {{ end }}
+    {{ if eq (.Scratch.Get "isMainPage") "true"  -}}
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    {{ else -}}
+    <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+    {{- end -}}
+    <div class="tags">
+        {{ range .Params.tags }}
+        {{ $name := . }}
+        <a href="/tags/{{ $name | urlize }}" class="pure-button">{{ $name }}</a>
+        {{ end }}
+    </div>
+    {{ replace .Content "<table>" "<table class='pure-table pure-table-striped'>" | safeHTML }}
+    
+        {{ if or (not .Params.ads) (eq .Params.ads true) }}
+        <div class ="GoogleAd_square">
+            <!-- Google AdSense-->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1903888574571147"
+                crossorigin="anonymous"></script>
+            <!-- Kad01 -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-1903888574571147"
+                data-ad-slot="6976114261"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <!-- Google AdSense-->
+        </div>
+        {{ end }}
+</article>
